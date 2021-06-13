@@ -40,7 +40,6 @@ templates:
         - Token
         - Burn
         - Mint
-        - Approval
         - Transfer
       abis:
         - name: Pairs
@@ -48,8 +47,6 @@ templates:
         - name: Factory
           file: ./abis/Factory.json
       eventHandlers:
-        - event: Approval(indexed address,indexed address,uint256)
-          handler: handleApproval
         - event: Burn(indexed address,uint256,uint256,indexed address)
           handler: handleBurn
         - event: Mint(indexed address,uint256,uint256)
